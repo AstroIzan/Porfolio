@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/astrap.css">
+    <link rel="icon" href="src/logo.png" type="image/png" sizes="16x16">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Izan Estirado Alfaro</title>
+</head>
+<body>
+    <section id="header" class="row-center" style="height: 10vh;">
+        <div class="container row-space-all">
+            <div id="menuOptioner" class="row-space-all">
+                <div class="imagenLogo row-center">
+                    <img src="src/recursos/logo.svg" alt="">
+                    <p>Izan Estirado Alfaro</p>
+                </div>
+                <div class="row-center">
+                    <i id="menuActivator" class='bx bx-menu' onclick="dropMenu()"></i>
+                    <i id="colorModeButton0" class='bx bxs-moon menuInvisibleIcon colorModeButton' onclick="darkMode(0)"></i>
+                </div>
+            </div>
+            <ul id="menu" class="menu row-space p-0">
+                <li><a href="#header">Inicio</a></li>
+                <li><a href="#about">Sobre mi</a></li>
+                <li><a href="#habilidades">Proyectos</a></li>
+                <li><a href="#footer">Contacto</a></li>
+                <i id="colorModeButton1" class='bx bxs-moon menuVisibleIcon colorModeButton' onclick="darkMode(1)"></i>
+            </ul>
+        </div>
+    </section>
+    <section id="simpleAbout" class="row-center">
+        <div class="aboutImage">
+            <img src="src/aboutImage.png" alt="">
+        </div>
+        <div class="aboutInfo column-center">
+            <h1>Muy buenas joven forastero!</h1>
+            <p>Soy <span>Izan Estirado</span>, desarrollador de aplicaciones web, aficionado a la astronomía, la tecnología, y la buena música!</p>
+        </div>
+    </section>
+    <section id="about" class="row-center">
+        <div class="container column-center">
+            <h1 class="pt-5">Que hago aqui?</h1>
+            <p class="pb-5">Pues la verdad, ni yo estoy seguro, ha pasado tan rápido el tiempo...<br>Miro atrás y veo a aquel inocente chiquillo de 11 años, 
+                con ganas de aprender, que empezó a mirar aquellos videos de como programar por YouTube y que poco a poco lo fueron introduciendo en este increíble mundo.
+                <br>Todo comenzó como un hobby para pasar las tardes, poco a poco me fui interesando más, me compré un Arduino, hice mi primer robot, con el tiempo mi primer juego 
+                y poco a poco fui haciendo hasta el día de hoy, que aquí estoy, haciendo mi porfolio web, quién lo diría!<br>A mí que tanto me gustaba el Back End y acabé 
+                pasándome al lado oscuro...</p>
+        </div>
+    </section>
+    <section id="habilidades" class="row-space-all">
+        <div id="exampleSkill" class="row-center">
+            <!-- base -->
+            <div id="base" class="skillInfo row-space visible" name="example">
+                <div class="infoDivs row-center">
+                    <div class="principalInfo column-center" >
+                        <h1>Mis proyectos</h1>
+                        <p>Estas son algunas de las cosas que puedo hacer, pero no es todo, si quieres saber más, puedes contactar conmigo!</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Unity -->
+            <div id="unity" class="skillInfo row-space hidden" name="example">
+                <div class="infoDivs row-center">
+                    <div class="principalInfo column-center">
+                        <h1 id="unityCounter"></h1>    
+                    </div>
+                </div>
+            </div>
+            <!-- Java -->
+            <div id="java" class="skillInfo row-space hidden" name="example">
+                <div class="infoDivs row-center">
+                    <div class="principalInfo column-center">
+                        <h1>Minicraft</h1>    
+                        <p>Minicraft es un juego, inspirado en el original <span>Minecraft</span>, pero con una estetica 2d, como si fuese un poequemon de los primeros</p>
+                    </div>
+                </div>
+            </div>
+            <!-- HTML/CSS -->
+            <div id="html" class="skillInfo row-space hidden" name="example">
+                <div class="arrow column-center">
+                    <img src="src/recursos/arrowLeft.svg" alt="" onclick="slide('html', 'left')">
+                </div>
+                <div id="htmlScroller" class="infoDivs row-center">
+                    <div id="animations" class="principalInfo column-center visible" name="htmlOptionsHtml" onclick="goToPage('//astroizan.github.io/Animations/')">
+                        <h1>Animaciones</h1>
+                        <p>Pequeña pero intensa demostración de <span>animaciones</span> con css.</p>
+                    </div>
+                    <div id="halloween" class="principalInfo column-center hidden" name="htmlOptionsHtml" onclick="goToPage('//astroizan.github.io/BootsHalloween/')">
+                        <h1>Halloween</h1>
+                        <p>Pequeña presentacion de una pagina maquetada completamente en <span>Bootstrap</span> con tematica de <span>halloween</span></p>
+                    </div>
+                    <div id="elixeum" class="principalInfo column-center hidden" name="htmlOptionsHtml" onclick="goToPage('//astroizan.github.io/Elixeum/')">
+                        <h1>Elixeum</h1>
+                        <p>Mi <span>primera pagina web</span>! Fue para un trabajo del instituo, hace ya años que la realicé, pero la nostalgia que me transmite es increible</p>
+                    </div>
+                    <div id="enterprise" class="principalInfo column-center hidden" name="htmlOptionsHtml" onclick="goToPage('//astroizan.github.io/BootsEnterprise/')">
+                        <h1>Enterprise</h1>
+                        <p>Pequeña presentacion de una pagina maquetada completamente en <span>Bootstrap</span> con tematica de una empresa del sector <span>informatico</span></p>
+                    </div>
+                </div>
+                <div class="arrow column-center">
+                    <img src="src/recursos/arrowRight.svg" alt="" onclick="slide('html', 'right')">
+                </div>
+            </div>
+            <!-- JavaScript -->
+            <div id="js" class="skillInfo row-space hidden" name="example">
+                <div class="arrow column-center">
+                    <img src="src/recursos/arrowLeft.svg" alt="" onclick="slide('js', 'left')">
+                </div>
+                <div class="infoDivs row-center">
+                    <div id="tren" class="principalInfo column-center visible" name="htmlOptionsJs" onclick="goToPage('//astroizan.github.io/Shinkansen/')">
+                        <h1>Shinkansen</h1>
+                        <p>Pequeña aplicacion para la <span>reserva de asientos</span> de tren.</p>    
+                    </div>
+                    <div id="buscaminas" class="principalInfo column-center hidden" name="htmlOptionsJs" onclick="goToPage('//astroizan.github.io/Buscaminas/')">
+                        <h1>Buscaminas</h1>
+                        <p>Pequeña aplicacion para jugar a un <span>buscaminas</span> un tanto distinto, y sin duda, con un toque de humor.</p>    
+                    </div>
+                    <div id="firebnb" class="principalInfo column-center hidden" name="htmlOptionsJs" onclick="goToPage('//astroizan.github.io/FireBnB/')">
+                        <h1>FireBnB</h1>
+                        <p>Una sencilla pagina web de <span>reserva de habitaciones</span> de hoteles <span>discretos...</span></p>    
+                    </div>
+                    <div id="examenes" class="principalInfo column-center hidden" name="htmlOptionsJs" onclick="goToPage('//astroizan.github.io/GeneradorTest/')">
+                        <h1>Generador de examenes</h1>
+                        <p>Esta fue una sencilla pagina para <span>autorealizar examenes</span>, permite una mayor rapidez para generar examenes de tipo test</p>    
+                    </div>
+                </div>
+                <div class="arrow column-center">
+                    <img src="src/recursos/arrowRight.svg" alt="" onclick="slide('js', 'right')">
+                </div>
+            </div>
+            <!-- PHP -->
+            <div id="php" class="skillInfo row-space hidden" name="example" onclick="goToPage('//astroizan.github.io/Pokinator/')">
+                <div class="infoDivs row-center">
+                    <div class="principalInfo column-center">
+                        <h1>Pokinator</h1>
+                        <p>Pokinator es un juego inspirado en el conocido <span>Akinator</span>. Trata de que el juego adivine le Pokemon en el que estas pensando, con una estetica e interfaz retro</p>    
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="skillSelector column-start">
+            <div id="java" name="selector" class="skill row-center non-selected" onclick="selectSkill('java')">
+                <i class='bx bxl-java' ></i>
+                <p>Java</p>
+            </div>
+            <div id="html" name="selector" class="skill row-center non-selected" onclick="selectSkill('html')">
+                <i class='bx bxl-html5' ></i>
+                <p>HTML/CSS</p>
+            </div>
+            <div id="js" name="selector" class="skill row-center non-selected" onclick="selectSkill('js')">
+                <i class='bx bxl-javascript' ></i>
+                <p>JavaScript</p>
+            </div>
+            <div id="php" name="selector" class="skill row-center non-selected" onclick="selectSkill('php')">
+                <i class='bx bxl-php' ></i>
+                <p>PHP</p>
+            </div>
+            <div id="unity" name="selector" class="skill row-center bn non-selected" onclick="selectSkill('unity')">
+                <i class='bx bxl-unity'></i>
+                <p>Unity</p>
+            </div>
+        </div>
+    </section>
+    <section id="footer" class="row-center">
+        <div class="container row-space-all">
+            <img src="src/recursos/logo.svg" alt="">
+            <p class="copyRight">All Rights Reserved © 2023 Izan Estirado Alfaro</p>
+            <div class="column-center">
+                <p class="m-0 mt-2">¿Quieres contactar conmigo?</p>
+                <ul class="menu row-center p-0">
+                    <li><a href="https://github.com/AstroIzan" target="_blank"><i class='bx bxl-github'></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/izan-estirado-alfaro-6871a016b/" target="_blank"><i class='bx bxl-linkedin'></i></a></li>
+                    <li><a href="https://www.instagram.com/astroizan/" target="_blank"><i class='bx bxl-instagram'></i></a></li>
+                    <li><a href="mailto:izan2003@gmail.com" target="_blank"><i class='bx bx-mail-send'></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <script src="js/script.js"></script>
+</body>
+</html>
