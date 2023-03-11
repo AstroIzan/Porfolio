@@ -42,7 +42,9 @@
         padding: 0;
         font-family: 'IM Fell Double Pica', serif; }
            
-    section { background: var(--wm-background); }
+    section { 
+        min-width: 375px;
+        background: var(--wm-background); }
 
     .column-start {
         display: flex;
@@ -201,7 +203,7 @@
         position: fixed;
         top: 0px;
         left: 0px;
-        width: 100%;
+        width: 100vw;
         z-index: 999;
         font-family: 'IM Fell Double Pica SC', serif;
         height: 10vh;
@@ -209,7 +211,6 @@
 
         /* Activator */
         #menuActivator { 
-            visibility: hidden;
             display: none;
             cursor: pointer;
             font-size: 3em; }
@@ -235,11 +236,7 @@
         /* Menu */
         #header #menu { 
             width: 70%;
-            height: 100%;
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-end;
-            align-items: center; }
+            justify-content: flex-end; }
 
         #header #menu li {
             list-style: none;
@@ -265,14 +262,6 @@
         .colorModeButton:hover { 
             color: var(--wm-dark-details);
             transform: scale(1.2); }
-
-        .menuInvisibleIcon {
-            visibility: hidden;
-            display: none; }
-
-        .menuVisibleIcon {
-            visibility: visible;
-            display: block; }
 
 /* FIRST ABOUT */
     #simpleAbout {
@@ -397,10 +386,6 @@
 
             #unity .principalInfo { background-image: url(../src/unityBackground.png); }
 
-
-        /* PHP */
-            #php .principalInfo{ background-image: url(../src/phpBackground.png); }
-
         /* SkillSelector */
         #habilidades .skillSelector {
             border-left: 2px solid var(--wm-dark-background);
@@ -460,141 +445,3 @@
             background-color: var(--wm-dark-details);
             transform: scale(1.3); }
 
-/* MEDIA QUERIES */
-    /* DESKTOP */
-    @media screen and (max-width: 1600px) {
-        /* Header zone */
-        #header #menu {
-            display: flex;
-            visibility: visible; }
-
-        /* Simple About zone */
-        #simpleAbout .aboutImage{ 
-            visibility: hidden;
-            display: none; }
-        #simpleAbout .aboutInfo {
-            width: 100%;
-            height: 100%; }
-        #simpleAbout .aboutInfo p { font-size: 1.8em; }
-        #simpleAbout .aboutInfo h1 { font-size: 7em; }
-
-        /* Skills zone */
-        #habilidades {
-            min-height: 70vh;
-            flex-direction: column; }
-
-        #habilidades .skillSelector {
-            border-left: none;
-            border-top: 2px solid var(--wm-dark-background);
-            width: 100%;
-            height: 14vh;
-            flex-direction: row; }
-
-        #habilidades .skillSelector .skill {
-            border-bottom: none;
-            width: 20%;
-            border-right: 2px solid var(--wm-dark-background);
-            height: 100%;
-            font-size: 2.5em; }
-    }
-
-    /* HIGH TABLET */
-    @media screen and (max-width: 1350px) {
-        /* Header zone */
-        #header .imagenLogo p {
-            display: none;
-            visibility: hidden; }
-        #header #menu {
-            display: flex;
-            visibility: visible;
-        }
-
-        /* Simple About zone */
-        #simpleAbout { height: 60vh; }
-        #simpleAbout .aboutInfo p { font-size: 1.3em; }
-        #simpleAbout .aboutInfo h1 { font-size: 5.5em; }
-
-        /* Skills zone */
-        #habilidades .principalInfo { font-size: 0.8em; }
-        #habilidades .skillSelector .skill p { font-size: 0.7em; }
-
-        /* Footer */
-        #footer p { font-size: 1.4em; }
-        #footer img {
-            visibility: hidden;
-            display: none; }
-    }
-
-    /* TABLET */
-    @media screen and (max-width: 1000px) {
-        /* Header zone */
-        #header { 
-            overflow: hidden;
-            height: 10vh; }
-        #header .container {
-            flex-direction: column;
-            justify-content: flex-start; }
-        #menuActivator {
-            visibility: visible;
-            display: block; }
-        #header #menu {
-            margin-top: 11vh;
-            min-height: 20vh;
-            width: 100vh;
-            flex-direction: column; }
-        #header #menu a { font-size: 2em !important; }
-        #header #menu li { margin: 10px 0px; }
-        #menuOptioner { 
-            margin-top: 2vh;
-            width: 100%; }
-        .menuVisibleIcon {
-            visibility: hidden;
-            display: none; }
-        .menuInvisibleIcon {
-            visibility: visible;
-            display: block; }
-
-        /* Simple About zone */
-        #simpleAbout { height: 50vh; }
-        #simpleAbout .aboutInfo p { 
-            top: 0%;
-            font-size: 1.2em; }
-        #simpleAbout .aboutInfo h1 { 
-            width: 80%;
-            font-size: 4em; }
-
-        /* About Zone */
-        #about {
-            height: 80vh;
-            background-size: 150%; }
-
-        /* Skills zone */
-        #habilidades .skillSelector .skill p { 
-            visibility: hidden;
-            display: none; }
-
-        #habilidades .skillSelector .skill i { font-size: 2em; }
-        #habilidades .principalInfo { font-size: 0.6em; }
-        #habilidades .principalInfo p { font-size: 2.2em; }
-
-        /* Footer */
-        #footer { min-height: 22vh; }
-        #footer p { font-size: 1.2em; }
-        #footer .container { 
-            justify-content: center;
-            flex-direction: column-reverse; }
-        #footer .copyRight { margin-top: 0px; }
-    }
-
-    /* MOBILE */
-    @media screen and (max-width: 600px) {
-        /* About Zone */
-        #about { height: 85vh; }
-
-        /* Skills zone */
-        #habilidades .skillSelector .skill i { font-size: 1.2em; }
-        #habilidades .principalInfo h1 { 
-            font-size: 6em;
-            margin: 0px; }
-        #habilidades .principalInfo p { font-size: 2.3em; }
-    }

@@ -13,7 +13,7 @@
          * Carga la página
          * @param page Página que se va a cargar
          */
-        function goToPage(page:string) { window.open("https:"+page, "_blank"); }
+        function goToPage(page:string) { window.open("https://"+page, "_blank"); }
 
     // Skill selector
         /**
@@ -81,13 +81,15 @@
          */
         function dropMenu() {
             var header:any = document.getElementById("header");
+            var headerHeight = header.offsetHeight;
             var menu:any = document.getElementById("menu");
+            var menuHeight = menu.offsetHeight;
             var menuButton:any = document.getElementById("menuActivator");
 
             if (header.style.height == "10vh") {
                 menuButton.classList.remove("bx-menu");
                 menuButton.classList.add("bx-menu-alt-right");
-                header.style.height = "40vh";
+                header.style.height = (headerHeight + menuHeight) + "px";
             } else {
                 menuButton.classList.remove("bx-menu-alt-right");
                 menuButton.classList.add("bx-menu");
