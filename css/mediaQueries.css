@@ -102,7 +102,10 @@
                     height: 100%;
                     width: 20%; }
                 #habilidades .skillSelector .skill p { display: none; }
-                #habilidades .skillSelector #unity { border-right: 2px solid var(--wm-dark-background); }
+                #habilidades .skillSelector #unity { 
+                    border-left: 2px solid var(--wm-dark-background) !important;
+                    border-top: 2px solid var(--wm-dark-background) !important;
+                    border-right: 2px solid var(--wm-dark-background) !important; }
                 #habilidades .skillInfo { 
                     flex-direction: column;
                     width: 100%; }
