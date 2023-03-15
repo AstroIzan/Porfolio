@@ -244,6 +244,7 @@
         #habilidades .skillSelector .skill p { 
             font-size: 0.7em;
             display: block; }
+        #habilidades .skillSelector #unity { border: none !important;}
 
     /* FOOTER */
         #footer .container{ flex-direction: row; }
