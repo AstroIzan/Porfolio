@@ -184,6 +184,7 @@
 
 @media only screen and (min-width: 1024px) {
     /* HEADER [menu] */
+    #header { height: 10vh !important; }
     #header .container {
         flex-direction: row;
         align-items: center;
@@ -220,7 +221,7 @@
             width: 90%;
             font-size: 5em; }
         #simpleAbout .aboutInfo p {
-            top: 50%;
+            top: 60%;
             width: 90%;
             font-size: 1.5em; }
     
@@ -245,6 +246,9 @@
             font-size: 0.7em;
             display: block; }
         #habilidades .skillSelector #unity { border: none !important;}
+
+        #habilidades .skillInfo h1 { font-size: 5em; }
+        #habilidades .skillInfo p { font-size: 1.5em; }
 
     /* FOOTER */
         #footer .container{ flex-direction: row; }
